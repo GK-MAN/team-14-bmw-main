@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="jumbotron">
+  <form>
+  
+    <h1>Assign Course</h1>
+  
+    <p></p>
+  
+  <div class="form-group postion">
+  <select class="form-control input" formControlName="purpose">
+         <input type="text"
+         class="form-control input"
+         id="onboarder_id"
+         name="onboarder_id"
+         [(ngModel)]="model.onboarder_id"
+         placeholder="Onboarder">
+  <option>Onboarder</option>
+  <option *ngFor="let onboarder of onboarder; let i = index">
+    {{onboarder.id}} - {{onboarder.name}}
+  </option>
+  </select>
+  </div>
+  
+  <p></p>
+  
+    <div class="form-group postion">
+      <select class="form-control input" formControlName="purpose">
+             <input type="text"
+             class="form-control input"
+             id="course_id"
+             name="course_id"
+             [(ngModel)]="model.course_id"
+             placeholder="Course">
+      <option>Course</option>
+      <option *ngFor="let course of course; let i = index">
+        {{course.id}} - {{course.name}}
+      </option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <input type="text"
+             class="form-control input"
+             id="registration_date"
+             name="registration_date"
+             [(ngModel)]="model.registration_date"
+             placeholder="Registration Date">
+    </div>
+  
+    <div class="">
+      <button type="submit" class="btn btn-success" (click)="addOnboarder_Course()">SAVE</button>
+    </div>
+  </form>
+  </div>
+</div>
